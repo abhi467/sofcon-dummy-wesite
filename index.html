@@ -1,0 +1,2970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOFCON Training - Best Industrial Training Institute in India | NSDC Certified</title>
+    <meta name="description" content="SOFCON India Pvt Ltd - ISO 9001:2015 & NSDC Certified Training Institute. Expert training in Industrial Automation, AI/ML, Data Science, Embedded Systems, HVAC, MEP & more. 70,000+ trained engineers.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-purple: #8b5cf6;
+            --primary-blue: #3b82f6;
+            --primary-cyan: #06b6d4;
+            --primary-pink: #ec4899;
+            --primary-orange: #f97316;
+            --primary-green: #10b981;
+            --dark-bg: #0a0a1f;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --card-border: rgba(255, 255, 255, 0.1);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.7);
+            
+            --gradient-purple: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%);
+            --gradient-blue: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+            --gradient-cyan: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+            --gradient-pink: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+            --gradient-orange: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+            --gradient-green: linear-gradient(135deg, #10b981 0%, #059669 100%);
+            --gradient-rainbow: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            --gradient-fire: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 50%, #c44569 100%);
+            --gradient-ocean: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0a0a1f;
+            color: var(--text-primary);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Animated Background */
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(ellipse at top, #1a1a3f 0%, #0a0a1f 50%, #000000 100%);
+            overflow: hidden;
+        }
+
+        .animated-bg::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(236, 72, 153, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(6, 182, 212, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 60% 60%, rgba(249, 115, 22, 0.1) 0%, transparent 50%);
+            animation: gradientMove 25s ease infinite;
+        }
+
+        .grid-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(139, 92, 246, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(139, 92, 246, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: -1;
+            animation: gridMove 20s linear infinite;
+        }
+
+        @keyframes gradientMove {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            50% { transform: translate(-50px, -50px) rotate(10deg); }
+        }
+
+        @keyframes gridMove {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(50px); }
+        }
+
+        /* Floating Particles */
+        .particle {
+            position: fixed;
+            width: 4px;
+            height: 4px;
+            background: rgba(139, 92, 246, 0.5);
+            border-radius: 50%;
+            animation: float 15s infinite;
+            z-index: -1;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) translateX(0); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(-100vh) translateX(100px); opacity: 0; }
+        }
+
+        /* Top Info Bar */
+        .top-bar {
+            background: rgba(10, 10, 31, 0.95);
+            padding: 0.8rem 5%;
+            border-bottom: 1px solid var(--card-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+
+        .top-bar-left {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .top-bar-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .top-bar-item i {
+            color: var(--primary-cyan);
+        }
+
+        .top-bar-right {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .top-bar-link {
+            color: var(--text-secondary);
+            text-decoration: none;
+            padding: 0.3rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s;
+            font-size: 0.85rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .top-bar-link:hover {
+            color: var(--primary-cyan);
+            background: rgba(6, 182, 212, 0.1);
+        }
+
+        /* Navigation */
+        .navbar {
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 31, 0.98);
+            backdrop-filter: blur(20px);
+            padding: 1.2rem 5%;
+            z-index: 1000;
+            border-bottom: 1px solid var(--card-border);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            font-weight: 900;
+            background: var(--gradient-rainbow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: 1px;
+            text-shadow: 0 0 30px rgba(139, 92, 246, 0.5);
+        }
+
+        .logo-badges {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .badge {
+            padding: 0.3rem 0.8rem;
+            background: var(--gradient-cyan);
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: white;
+            box-shadow: 0 5px 15px rgba(6, 182, 212, 0.3);
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        .badge:nth-child(2) {
+            background: var(--gradient-orange);
+            box-shadow: 0 5px 15px rgba(249, 115, 22, 0.3);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s;
+            position: relative;
+            padding: 0.5rem 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-rainbow);
+            transition: width 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(10, 10, 31, 0.98);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--card-border);
+            border-radius: 10px;
+            padding: 1rem 0;
+            min-width: 250px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.8rem 1.5rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.3s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .dropdown-menu a:hover {
+            background: rgba(139, 92, 246, 0.1);
+            color: var(--primary-purple);
+            padding-left: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-enroll {
+            background: var(--gradient-purple);
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+            font-size: 0.95rem;
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        .btn-enroll:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(139, 92, 246, 0.6);
+        }
+
+        .btn-call {
+            background: transparent;
+            color: var(--primary-orange);
+            padding: 0.8rem 2rem;
+            border: 2px solid var(--primary-orange);
+            border-radius: 50px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.95rem;
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        .btn-call:hover {
+            background: var(--primary-orange);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 5% 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #8b5cf6 30%, #ec4899 60%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+            animation: fadeInUp 1s ease;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            animation: fadeInUp 1s ease 0.2s both;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .hero-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+            animation: fadeInUp 1s ease 0.4s both;
+        }
+
+        .hero-feature {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.8rem 1.5rem;
+            background: rgba(139, 92, 246, 0.1);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 50px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .hero-feature:nth-child(2) {
+            background: rgba(236, 72, 153, 0.1);
+            border-color: rgba(236, 72, 153, 0.3);
+        }
+
+        .hero-feature:nth-child(3) {
+            background: rgba(6, 182, 212, 0.1);
+            border-color: rgba(6, 182, 212, 0.3);
+        }
+
+        .hero-feature i {
+            color: var(--primary-purple);
+            font-size: 1.2rem;
+        }
+
+        .hero-feature:nth-child(2) i {
+            color: var(--primary-pink);
+        }
+
+        .hero-feature:nth-child(3) i {
+            color: var(--primary-cyan);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+
+        .btn-primary {
+            background: var(--gradient-purple);
+            color: white;
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.4s;
+            box-shadow: 0 15px 40px rgba(139, 92, 246, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 60px rgba(139, 92, 246, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            padding: 1.2rem 3rem;
+            border: 2px solid var(--primary-pink);
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.4s;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        .btn-secondary:hover {
+            background: var(--gradient-pink);
+            border-color: transparent;
+            transform: translateY(-5px);
+        }
+
+        .hero-visual {
+            position: relative;
+            animation: fadeInRight 1s ease 0.4s both;
+        }
+
+        .hero-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--card-border);
+            border-radius: 30px;
+            padding: 3rem;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.1) 0%, rgba(236, 72, 153, 0.1) 100%);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        .hero-card:hover::before {
+            opacity: 1;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .hero-stat {
+            text-align: center;
+            padding: 1.5rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 15px;
+            border: 1px solid var(--card-border);
+            transition: all 0.3s;
+        }
+
+        .hero-stat:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-5px);
+        }
+
+        .hero-stat:nth-child(1) {
+            border-color: rgba(139, 92, 246, 0.3);
+        }
+
+        .hero-stat:nth-child(2) {
+            border-color: rgba(236, 72, 153, 0.3);
+        }
+
+        .hero-stat:nth-child(3) {
+            border-color: rgba(6, 182, 212, 0.3);
+        }
+
+        .hero-stat:nth-child(4) {
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+
+        .stat-number {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            font-weight: 900;
+            background: var(--gradient-purple);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero-stat:nth-child(2) .stat-number {
+            background: var(--gradient-pink);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-stat:nth-child(3) .stat-number {
+            background: var(--gradient-cyan);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-stat:nth-child(4) .stat-number {
+            background: var(--gradient-green);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInRight {
+            from {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Marquee Section */
+        .marquee-section {
+            padding: 2rem 0;
+            background: linear-gradient(90deg, 
+                rgba(139, 92, 246, 0.1) 0%, 
+                rgba(236, 72, 153, 0.1) 25%,
+                rgba(6, 182, 212, 0.1) 50%,
+                rgba(249, 115, 22, 0.1) 75%,
+                rgba(139, 92, 246, 0.1) 100%
+            );
+            border-top: 1px solid rgba(139, 92, 246, 0.2);
+            border-bottom: 1px solid rgba(236, 72, 153, 0.2);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .marquee-wrapper {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .marquee-content {
+            display: inline-flex;
+            animation: marqueeScroll 40s linear infinite;
+            gap: 4rem;
+        }
+
+        .marquee-item {
+            flex-shrink: 0;
+            color: var(--text-primary);
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.5rem 1.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        .marquee-item:nth-child(1) i { color: #8b5cf6; }
+        .marquee-item:nth-child(2) i { color: #ec4899; }
+        .marquee-item:nth-child(3) i { color: #06b6d4; }
+        .marquee-item:nth-child(4) i { color: #f97316; }
+        .marquee-item:nth-child(5) i { color: #10b981; }
+
+        @keyframes marqueeScroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Stats Section */
+        .stats-section {
+            padding: 100px 5%;
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid var(--card-border);
+        }
+
+        .stats-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .stat-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--card-border);
+            border-radius: 25px;
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-purple);
+            transform: scaleX(0);
+            transition: transform 0.4s;
+        }
+
+        .stat-card:nth-child(2)::before { background: var(--gradient-pink); }
+        .stat-card:nth-child(3)::before { background: var(--gradient-cyan); }
+        .stat-card:nth-child(4)::before { background: var(--gradient-orange); }
+        .stat-card:nth-child(5)::before { background: var(--gradient-green); }
+        .stat-card:nth-child(6)::before { background: var(--gradient-blue); }
+
+        .stat-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .stat-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(139, 92, 246, 0.3);
+        }
+
+        .stat-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            background: var(--gradient-purple);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-card:nth-child(2) .stat-icon {
+            background: var(--gradient-pink);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-card:nth-child(3) .stat-icon {
+            background: var(--gradient-cyan);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-card:nth-child(4) .stat-icon {
+            background: var(--gradient-orange);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-card:nth-child(5) .stat-icon {
+            background: var(--gradient-green);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-card:nth-child(6) .stat-icon {
+            background: var(--gradient-blue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-value {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: var(--gradient-purple);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.8rem;
+        }
+
+        .stat-card:nth-child(2) .stat-value {
+            background: var(--gradient-pink);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-card:nth-child(3) .stat-value {
+            background: var(--gradient-cyan);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-card:nth-child(4) .stat-value {
+            background: var(--gradient-orange);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-card:nth-child(5) .stat-value {
+            background: var(--gradient-green);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-card:nth-child(6) .stat-value {
+            background: var(--gradient-blue);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-text {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Section Title */
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ffffff 0%, #8b5cf6 30%, #ec4899 60%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Courses Section */
+        .courses-section {
+            padding: 100px 5%;
+        }
+
+        .courses-container {
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .course-categories {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 4rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .category-btn {
+            padding: 1rem 2.5rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--card-border);
+            border-radius: 50px;
+            color: var(--text-secondary);
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        .category-btn:hover,
+        .category-btn.active {
+            background: var(--gradient-purple);
+            border-color: transparent;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+        }
+
+        .category-btn:nth-child(2):hover,
+        .category-btn:nth-child(2).active {
+            background: var(--gradient-pink);
+            box-shadow: 0 10px 30px rgba(236, 72, 153, 0.4);
+        }
+
+        .category-btn:nth-child(3):hover,
+        .category-btn:nth-child(3).active {
+            background: var(--gradient-cyan);
+            box-shadow: 0 10px 30px rgba(6, 182, 212, 0.4);
+        }
+
+        .category-btn:nth-child(4):hover,
+        .category-btn:nth-child(4).active {
+            background: var(--gradient-orange);
+            box-shadow: 0 10px 30px rgba(249, 115, 22, 0.4);
+        }
+
+        .category-btn:nth-child(5):hover,
+        .category-btn:nth-child(5).active {
+            background: var(--gradient-green);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.4);
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .course-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--card-border);
+            border-radius: 25px;
+            padding: 2.5rem;
+            transition: all 0.4s;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .course-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--gradient-purple);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s;
+        }
+
+        .course-card:nth-child(3n+2)::before { background: var(--gradient-pink); }
+        .course-card:nth-child(3n+3)::before { background: var(--gradient-cyan); }
+
+        .course-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .course-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-10px);
+            box-shadow: 0 30px 70px rgba(139, 92, 246, 0.3);
+        }
+
+        .course-icon-box {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-purple);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            box-shadow: 0 15px 35px rgba(139, 92, 246, 0.4);
+            transition: all 0.3s;
+        }
+
+        .course-card:nth-child(3n+2) .course-icon-box {
+            background: var(--gradient-pink);
+            box-shadow: 0 15px 35px rgba(236, 72, 153, 0.4);
+        }
+
+        .course-card:nth-child(3n+3) .course-icon-box {
+            background: var(--gradient-cyan);
+            box-shadow: 0 15px 35px rgba(6, 182, 212, 0.4);
+        }
+
+        .course-card:hover .course-icon-box {
+            transform: rotateY(180deg);
+        }
+
+        .course-icon-box i {
+            font-size: 2.5rem;
+            color: white;
+        }
+
+        .course-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+
+        .course-description {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .course-features {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .course-feature-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .course-feature-item i {
+            color: var(--primary-purple);
+        }
+
+        .course-card:nth-child(3n+2) .course-feature-item i {
+            color: var(--primary-pink);
+        }
+
+        .course-card:nth-child(3n+3) .course-feature-item i {
+            color: var(--primary-cyan);
+        }
+
+        .course-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--card-border);
+        }
+
+        .course-duration {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .course-duration i {
+            color: var(--primary-purple);
+        }
+
+        .course-btn {
+            background: var(--gradient-purple);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            border: none;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        .course-card:nth-child(3n+2) .course-btn {
+            background: var(--gradient-pink);
+        }
+
+        .course-card:nth-child(3n+3) .course-btn {
+            background: var(--gradient-cyan);
+        }
+
+        .course-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 100px 5%;
+            background: var(--card-bg);
+            backdrop-filter: blur(20px);
+        }
+
+        .features-grid {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            transition: all 0.4s;
+        }
+
+        .feature-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 50px rgba(139, 92, 246, 0.3);
+        }
+
+        .feature-icon {
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
+            background: var(--gradient-purple);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .feature-card:nth-child(4n+2) .feature-icon {
+            background: var(--gradient-pink);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .feature-card:nth-child(4n+3) .feature-icon {
+            background: var(--gradient-cyan);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .feature-card:nth-child(4n+4) .feature-icon {
+            background: var(--gradient-orange);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .feature-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        .feature-description {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Student Zone Dashboard */
+        .dashboard-section {
+            padding: 100px 5%;
+        }
+
+        .dashboard-grid {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .dashboard-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 25px;
+            padding: 2.5rem;
+            transition: all 0.4s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dashboard-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.2) 0%, transparent 70%);
+            transition: all 0.4s;
+        }
+
+        .dashboard-card:nth-child(3n+2)::after {
+            background: radial-gradient(circle, rgba(236, 72, 153, 0.2) 0%, transparent 70%);
+        }
+
+        .dashboard-card:nth-child(3n+3)::after {
+            background: radial-gradient(circle, rgba(6, 182, 212, 0.2) 0%, transparent 70%);
+        }
+
+        .dashboard-card:hover::after {
+            width: 200px;
+            height: 200px;
+        }
+
+        .dashboard-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-10px);
+            box-shadow: 0 25px 60px rgba(139, 92, 246, 0.3);
+        }
+
+        .dashboard-icon {
+            width: 75px;
+            height: 75px;
+            background: var(--gradient-purple);
+            border-radius: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 15px 35px rgba(139, 92, 246, 0.3);
+        }
+
+        .dashboard-card:nth-child(3n+2) .dashboard-icon {
+            background: var(--gradient-pink);
+            box-shadow: 0 15px 35px rgba(236, 72, 153, 0.3);
+        }
+
+        .dashboard-card:nth-child(3n+3) .dashboard-icon {
+            background: var(--gradient-cyan);
+            box-shadow: 0 15px 35px rgba(6, 182, 212, 0.3);
+        }
+
+        .dashboard-icon i {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .dashboard-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        .dashboard-description {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 100px 5%;
+            background: var(--card-bg);
+        }
+
+        .testimonials-grid {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--card-border);
+            border-radius: 25px;
+            padding: 3rem;
+            position: relative;
+            transition: all 0.4s;
+        }
+
+        .testimonial-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(139, 92, 246, 0.3);
+        }
+
+        .quote-icon {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            font-size: 4rem;
+            color: rgba(139, 92, 246, 0.15);
+        }
+
+        .testimonial-card:nth-child(3n+2) .quote-icon {
+            color: rgba(236, 72, 153, 0.15);
+        }
+
+        .testimonial-card:nth-child(3n+3) .quote-icon {
+            color: rgba(6, 182, 212, 0.15);
+        }
+
+        .testimonial-text {
+            color: var(--text-secondary);
+            line-height: 1.9;
+            margin-bottom: 2.5rem;
+            font-size: 1.05rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .author-avatar {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-purple);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            font-weight: 900;
+            font-family: 'Orbitron', sans-serif;
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+        }
+
+        .testimonial-card:nth-child(3n+2) .author-avatar {
+            background: var(--gradient-pink);
+            box-shadow: 0 10px 30px rgba(236, 72, 153, 0.4);
+        }
+
+        .testimonial-card:nth-child(3n+3) .author-avatar {
+            background: var(--gradient-cyan);
+            box-shadow: 0 10px 30px rgba(6, 182, 212, 0.4);
+        }
+
+        .author-info h4 {
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+            font-size: 1.1rem;
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        .author-info p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .author-rating {
+            display: flex;
+            gap: 0.3rem;
+            margin-top: 0.5rem;
+        }
+
+        .author-rating i {
+            color: #fbbf24;
+            font-size: 0.9rem;
+        }
+
+        /* Placement Companies */
+        .companies-section {
+            padding: 80px 5%;
+        }
+
+        .companies-grid {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 2rem;
+        }
+
+        .company-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--card-border);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .company-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-8px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(139, 92, 246, 0.3);
+        }
+
+        .company-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .company-card:nth-child(4n+1) .company-icon { color: var(--primary-purple); }
+        .company-card:nth-child(4n+2) .company-icon { color: var(--primary-pink); }
+        .company-card:nth-child(4n+3) .company-icon { color: var(--primary-cyan); }
+        .company-card:nth-child(4n+4) .company-icon { color: var(--primary-orange); }
+
+        .company-name {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 100px 5%;
+            background: var(--card-bg);
+        }
+
+        .contact-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 5rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--card-border);
+            border-radius: 20px;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            transition: all 0.3s;
+        }
+
+        .contact-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateX(10px);
+        }
+
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-purple);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            flex-shrink: 0;
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.3);
+        }
+
+        .contact-card:nth-child(2) .contact-icon {
+            background: var(--gradient-pink);
+            box-shadow: 0 10px 30px rgba(236, 72, 153, 0.3);
+        }
+
+        .contact-card:nth-child(3) .contact-icon {
+            background: var(--gradient-cyan);
+            box-shadow: 0 10px 30px rgba(6, 182, 212, 0.3);
+        }
+
+        .contact-details h4 {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        .contact-details p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--card-border);
+            border-radius: 25px;
+            padding: 3rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 1.2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        /* FIXED: Dropdown options styling */
+        .form-group select {
+            cursor: pointer;
+        }
+
+        .form-group select option {
+            background: #1a1a3f;
+            color: #ffffff;
+            padding: 1rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-purple);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+        }
+
+        .form-submit {
+            background: var(--gradient-purple);
+            color: white;
+            padding: 1.2rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s;
+            box-shadow: 0 15px 40px rgba(139, 92, 246, 0.4);
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        .form-submit:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(139, 92, 246, 0.6);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 80px 5% 30px;
+            background: rgba(0, 0, 0, 0.6);
+            border-top: 1px solid var(--card-border);
+        }
+
+        .footer-container {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-about h3 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            background: var(--gradient-rainbow);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .footer-about p {
+            color: var(--text-secondary);
+            line-height: 1.9;
+            margin-bottom: 2rem;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s;
+            font-size: 1.2rem;
+        }
+
+        .social-link:nth-child(1):hover {
+            background: var(--gradient-purple);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.4);
+        }
+
+        .social-link:nth-child(2):hover {
+            background: var(--gradient-cyan);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(6, 182, 212, 0.4);
+        }
+
+        .social-link:nth-child(3):hover {
+            background: var(--gradient-blue);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+        }
+
+        .social-link:nth-child(4):hover {
+            background: var(--gradient-pink);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(236, 72, 153, 0.4);
+        }
+
+        .social-link:nth-child(5):hover {
+            background: var(--gradient-orange);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(249, 115, 22, 0.4);
+        }
+
+        .footer-section h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            font-family: 'Rajdhani', sans-serif;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-purple);
+            padding-left: 8px;
+        }
+
+        .footer-links a i {
+            font-size: 0.8rem;
+            color: var(--primary-purple);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 3rem;
+            border-top: 1px solid var(--card-border);
+            color: var(--text-secondary);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .footer-bottom p {
+            margin-bottom: 1rem;
+        }
+
+        /* Scroll to Top */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-purple);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(139, 92, 246, 0.5);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+            z-index: 999;
+        }
+
+        .scroll-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(139, 92, 246, 0.7);
+        }
+
+        .scroll-top i {
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .hero-content h1 {
+                font-size: 3rem;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .top-bar {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .top-bar-left,
+            .top-bar-right {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu-toggle {
+                display: block;
+            }
+
+            .cta-buttons {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+            }
+
+            .courses-grid,
+            .features-grid,
+            .dashboard-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Scroll Animation */
+        .scroll-animation {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s ease;
+        }
+
+        .scroll-animation.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Loading Animation */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0a0a1f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s, visibility 0.5s;
+        }
+
+        .loading-screen.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader {
+            width: 80px;
+            height: 80px;
+            border: 4px solid rgba(139, 92, 246, 0.3);
+            border-top: 4px solid var(--primary-purple);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+    <div class="grid-overlay"></div>
+
+    <!-- Floating Particles -->
+    <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="particle" style="left: 20%; animation-delay: 2s;"></div>
+    <div class="particle" style="left: 30%; animation-delay: 4s;"></div>
+    <div class="particle" style="left: 40%; animation-delay: 1s;"></div>
+    <div class="particle" style="left: 50%; animation-delay: 3s;"></div>
+    <div class="particle" style="left: 60%; animation-delay: 5s;"></div>
+    <div class="particle" style="left: 70%; animation-delay: 2.5s;"></div>
+    <div class="particle" style="left: 80%; animation-delay: 4.5s;"></div>
+    <div class="particle" style="left: 90%; animation-delay: 1.5s;"></div>
+
+    <!-- Top Info Bar -->
+    <div class="top-bar">
+        <div class="top-bar-left">
+            <div class="top-bar-item">
+                <i class="fas fa-phone-alt"></i>
+                <span>+91-9873684099</span>
+            </div>
+            <div class="top-bar-item">
+                <i class="fas fa-envelope"></i>
+                <span>info@sofcontraining.com</span>
+            </div>
+        </div>
+        <div class="top-bar-right">
+            <a href="#" class="top-bar-link">Student Zone</a>
+            <a href="#" class="top-bar-link">Employer Enquiry</a>
+            <a href="#" class="top-bar-link">Career With Us</a>
+            <a href="#" class="top-bar-link">Blog & Articles</a>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <div class="logo">SOFCON</div>
+                <div class="logo-badges">
+                    <span class="badge">NSDC</span>
+                    <span class="badge">ISO</span>
+                </div>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li class="nav-dropdown">
+                    <a href="#about">About Us <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#">About SOFCON</a>
+                        <a href="#">Mission & Vision</a>
+                        <a href="#">Management Profile</a>
+                    </div>
+                </li>
+                <li class="nav-dropdown">
+                    <a href="#training">Training <i class="fas fa-chevron-down" style="font-size: 0.7rem;"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="#">Job Oriented Training</a>
+                        <a href="#">Summer/Winter Training</a>
+                        <a href="#">Industrial Internship</a>
+                        <a href="#">Skill Development</a>
+                        <a href="#">International Training</a>
+                    </div>
+                </li>
+                <li><a href="#placement">Placement</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            
+            <div class="cta-buttons">
+                <button class="btn-enroll">Enroll Now</button>
+                <button class="btn-call"><i class="fas fa-phone"></i></button>
+            </div>
+
+            <button class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>Best Industrial Training Institute in India</h1>
+                <p class="hero-subtitle">
+                    NSDC Certified | ISO 9001:2015 Certified | Government Approved Training Institute. 
+                    Transform your career with industry-leading courses in Automation, AI/ML, Data Science & more.
+                </p>
+                
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>70,000+ Trained Engineers</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>100% Placement Assistance</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Expert Industry Trainers</span>
+                    </div>
+                </div>
+
+                <div class="hero-buttons">
+                    <button class="btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        Explore Courses
+                    </button>
+                    <button class="btn-secondary">
+                        <i class="fas fa-play-circle"></i>
+                        Watch Demo
+                    </button>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-card">
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <div class="stat-number">70K+</div>
+                            <div class="stat-label">Students Trained</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="stat-number">500+</div>
+                            <div class="stat-label">College Partners</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label">Int'l Students</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="stat-number">8+</div>
+                            <div class="stat-label">Training Centers</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee Section - FIXED -->
+    <div class="marquee-section">
+        <div class="marquee-wrapper">
+            <div class="marquee-content">
+                <div class="marquee-item"><i class="fas fa-star"></i> Online Registration Open</div>
+                <div class="marquee-item"><i class="fas fa-star"></i> Online Sessions Available</div>
+                <div class="marquee-item"><i class="fas fa-star"></i> Online Certification</div>
+                <div class="marquee-item"><i class="fas fa-star"></i> Summer Training 2025</div>
+                <div class="marquee-item"><i class="fas fa-star"></i> Webinar Series</div>
+                <!-- Duplicate for seamless loop -->
+                <div class="marquee-item"><i class="fas fa-star"></i> Online Registration Open</div>
+                <div class="marquee-item"><i class="fas fa-star"></i> Online Sessions Available</div>
+                <div class="marquee-item"><i class="fas fa-star"></i> Online Certification</div>
+                <div class="marquee-item"><i class="fas fa-star"></i> Summer Training 2025</div>
+                <div class="marquee-item"><i class="fas fa-star"></i> Webinar Series</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-card scroll-animation">
+                <div class="stat-icon"><i class="fas fa-users"></i></div>
+                <div class="stat-value">70,000+</div>
+                <div class="stat-text">Trained Engineers & Professionals</div>
+            </div>
+            <div class="stat-card scroll-animation">
+                <div class="stat-icon"><i class="fas fa-globe"></i></div>
+                <div class="stat-value">1,000+</div>
+                <div class="stat-text">International Candidates</div>
+            </div>
+            <div class="stat-card scroll-animation">
+                <div class="stat-icon"><i class="fas fa-building"></i></div>
+                <div class="stat-value">400+</div>
+                <div class="stat-text">Corporate Training Batches</div>
+            </div>
+            <div class="stat-card scroll-animation">
+                <div class="stat-icon"><i class="fas fa-university"></i></div>
+                <div class="stat-value">500+</div>
+                <div class="stat-text">College Training Programs</div>
+            </div>
+            <div class="stat-card scroll-animation">
+                <div class="stat-icon"><i class="fas fa-briefcase"></i></div>
+                <div class="stat-value">100%</div>
+                <div class="stat-text">Placement Assistance</div>
+            </div>
+            <div class="stat-card scroll-animation">
+                <div class="stat-icon"><i class="fas fa-map-marker-alt"></i></div>
+                <div class="stat-value">8+</div>
+                <div class="stat-text">Training Centers Across India</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="training" class="courses-section">
+        <div class="section-header">
+            <h2 class="section-title">Our Premium Training Courses</h2>
+            <p class="section-subtitle">Industry-aligned curriculum designed by experts with hands-on practical training</p>
+        </div>
+
+        <div class="courses-container">
+            <div class="course-categories">
+                <button class="category-btn active">All Courses</button>
+                <button class="category-btn">Automation</button>
+                <button class="category-btn">AI & Data Science</button>
+                <button class="category-btn">Design & Drafting</button>
+                <button class="category-btn">Software & IT</button>
+            </div>
+
+            <div class="courses-grid">
+                <!-- Course 1 -->
+                <div class="course-card scroll-animation">
+                    <div class="course-icon-box">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="course-title">Industrial Automation System</h3>
+                    <p class="course-description">
+                        Master PLC, SCADA, DCS, HMI with hands-on training on latest Siemens, Allen Bradley, and Schneider equipment.
+                    </p>
+                    <div class="course-features">
+                        <div class="course-feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Live Project Training</span>
+                        </div>
+                        <div class="course-feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Industry Expert Trainers</span>
+                        </div>
+                        <div class="course-feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>NSDC Certification</span>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <div class="course-duration">
+                            <i class="fas fa-clock"></i>
+                            <span>3-6 Months</span>
+                        </div>
+                        <button class="course-btn">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="course-card scroll-animation">
+                    <div class="course-icon-box">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="course-title">Artificial Intelligence & ML</h3>
+                    <p class="course-description">
+                        Deep Learning, Neural Networks, TensorFlow, PyTorch. Build real-world AI applications with expert guidance.
+                    </p>
+                    <div class="course-features">
+                        <div class="course-feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Industry Projects</span>
+                        </div>
+                        <div class="course-feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Python & R Programming</span>
+                        </div>
+                        <div class="course-feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>100% Job Assistance</span>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <div class="course-duration">
+                            <i class="fas fa-clock"></i>
+                            <span>4-6 Months</span>
+                        </div>
+                        <button class="course-btn">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="course-card scroll-animation">
+                    <div class="course-icon-box">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="course-title">Data Science & Analytics</h3>
+                    <p class="course-description">
+                        Python, R, Machine Learning, Big Data Analytics. Become a data-driven professional with practical skills.
+                    </p>
+                    <div class="course-features">
+                        <div class="course-feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Real Industry Datasets</span>
+                        </div>
+                        <div class="course-feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Advanced Analytics Tools</span>
+                        </div>
+                        <div class="course-feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Placement Support</span>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <div class="course-duration">
+                            <i class="fas fa-clock"></i>
+                            <span>3-6 Months</span>
+                        </div>
+                        <button class="course-btn">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- Course 4 -->
+                <div class="course-card scroll-animation">
+                    <div class="course-icon-box">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3 class="course-title">Embedded Systems & IoT</h3>
+                    <p class="course-description">
+                        ARM, Arduino, Raspberry Pi, IoT protocols. Design and develop smart connected devices and systems.
+                    </p>
+                    <div class="course-features">
+                        <div class="course-feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>PCB Design Training</span>
+                        </div>
+                        <div class="course-feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Robotics Integration</span>
+                        </div>
+                        <div class="course-feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Industry Certification</span>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <div class="course-duration">
+                            <i class="fas fa-clock"></i>
+                            <span>3-6 Months</span>
+                        </div>
+                        <button class="course-btn">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- Course 5 -->
+                <div class="course-card scroll-animation">
+                    <div class="course-icon-box">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <h3 class="course-title">HVAC Design & MEP</h3>
+                    <p class="course-description">
+                        Complete building services design, AutoCAD MEP, Revit MEP. Industry-standard training for MEP engineers.
+                    </p>
+                    <div class="course-features">
+                        <div class="course-feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>AutoCAD MEP</span>
+                        </div>
+                        <div class="course-feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Revit MEP Training</span>
+                        </div>
+                        <div class="course-feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Site Exposure</span>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <div class="course-duration">
+                            <i class="fas fa-clock"></i>
+                            <span>3-6 Months</span>
+                        </div>
+                        <button class="course-btn">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- Course 6 -->
+                <div class="course-card scroll-animation">
+                    <div class="course-icon-box">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="course-title">Full Stack Development</h3>
+                    <p class="course-description">
+                        MERN Stack, React, Node.js, MongoDB. Build modern scalable web applications from scratch.
+                    </p>
+                    <div class="course-features">
+                        <div class="course-feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Live Project Work</span>
+                        </div>
+                        <div class="course-feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>GitHub Portfolio</span>
+                        </div>
+                        <div class="course-feature-item">
+                            <i class="fas fa-check"></i>
+                            <span>Job Guarantee Program</span>
+                        </div>
+                    </div>
+                    <div class="course-footer">
+                        <div class="course-duration">
+                            <i class="fas fa-clock"></i>
+                            <span>4-6 Months</span>
+                        </div>
+                        <button class="course-btn">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- More courses (7-12) can be added here following the same pattern -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="section-header">
+            <h2 class="section-title">Why Choose SOFCON Training?</h2>
+            <p class="section-subtitle">Experience world-class technical education with industry-best facilities</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card scroll-animation">
+                <div class="feature-icon">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <h3 class="feature-title">Expert Industry Trainers</h3>
+                <p class="feature-description">
+                    Learn from professionals with 10+ years of industry experience in top companies
+                </p>
+            </div>
+
+            <div class="feature-card scroll-animation">
+                <div class="feature-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3 class="feature-title">Advanced Labs</h3>
+                <p class="feature-description">
+                    State-of-the-art equipment, latest software, and simulation kits for hands-on training
+                </p>
+            </div>
+
+            <div class="feature-card scroll-animation">
+                <div class="feature-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3 class="feature-title">100% Placement Assistance</h3>
+                <p class="feature-description">
+                    Dedicated placement cell with 500+ hiring partners across India and abroad
+                </p>
+            </div>
+
+            <div class="feature-card scroll-animation">
+                <div class="feature-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h3 class="feature-title">NSDC Certified</h3>
+                <p class="feature-description">
+                    Government recognized and industry accepted certifications for career advancement
+                </p>
+            </div>
+
+            <div class="feature-card scroll-animation">
+                <div class="feature-icon">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <h3 class="feature-title">Live Industry Projects</h3>
+                <p class="feature-description">
+                    Work on real-world projects and case studies from leading companies
+                </p>
+            </div>
+
+            <div class="feature-card scroll-animation">
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="feature-title">Small Batch Size</h3>
+                <p class="feature-description">
+                    Personalized attention with limited students per batch for quality learning
+                </p>
+            </div>
+
+            <div class="feature-card scroll-animation">
+                <div class="feature-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3 class="feature-title">Flexible Timings</h3>
+                <p class="feature-description">
+                    Weekend and weekday batches available for working professionals and students
+                </p>
+            </div>
+
+            <div class="feature-card scroll-animation">
+                <div class="feature-icon">
+                    <i class="fas fa-building"></i>
+                </div>
+                <h3 class="feature-title">8+ Training Centers</h3>
+                <p class="feature-description">
+                    Located in Noida, Delhi, Pune, Ahmedabad, Bhopal, Indore & more cities
+                </p>
+            </div>
+
+            <div class="feature-card scroll-animation">
+                <div class="feature-icon">
+                    <i class="fas fa-industry"></i>
+                </div>
+                <h3 class="feature-title">Industrial Visits</h3>
+                <p class="feature-description">
+                    Regular site visits to power plants, automation facilities, and manufacturing units
+                </p>
+            </div>
+
+            <div class="feature-card scroll-animation">
+                <div class="feature-icon">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <h3 class="feature-title">Soft Skills Training</h3>
+                <p class="feature-description">
+                    Interview preparation, communication skills, and personality development sessions
+                </p>
+            </div>
+
+            <div class="feature-card scroll-animation">
+                <div class="feature-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3 class="feature-title">Scholarship Programs</h3>
+                <p class="feature-description">
+                    Merit-based scholarships and financial assistance for deserving candidates
+                </p>
+            </div>
+
+            <div class="feature-card scroll-animation">
+                <div class="feature-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3 class="feature-title">International Training</h3>
+                <p class="feature-description">
+                    Global certifications and international exposure programs available
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Student Zone Dashboard -->
+    <section id="dashboard" class="dashboard-section">
+        <div class="section-header">
+            <h2 class="section-title">Student Zone Dashboard</h2>
+            <p class="section-subtitle">Access all student services and resources in one place</p>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="dashboard-card scroll-animation">
+                <div class="dashboard-icon">
+                    <i class="fas fa-user-plus"></i>
+                </div>
+                <h3 class="dashboard-title">Online Registration</h3>
+                <p class="dashboard-description">
+                    Quick and easy course enrollment with our digital registration system. Get instant confirmation.
+                </p>
+            </div>
+
+            <div class="dashboard-card scroll-animation">
+                <div class="dashboard-icon">
+                    <i class="fas fa-file-certificate"></i>
+                </div>
+                <h3 class="dashboard-title">Apply for e-Certificate</h3>
+                <p class="dashboard-description">
+                    Download your digital NSDC certified course completion certificates instantly online.
+                </p>
+            </div>
+
+            <div class="dashboard-card scroll-animation">
+                <div class="dashboard-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h3 class="dashboard-title">Certificate Verification</h3>
+                <p class="dashboard-description">
+                    Verify the authenticity of SOFCON certificates online with unique ID verification.
+                </p>
+            </div>
+
+            <div class="dashboard-card scroll-animation">
+                <div class="dashboard-icon">
+                    <i class="fas fa-tasks"></i>
+                </div>
+                <h3 class="dashboard-title">Online Assessment</h3>
+                <p class="dashboard-description">
+                    Take skill assessment tests and track your progress with our online testing platform.
+                </p>
+            </div>
+
+            <div class="dashboard-card scroll-animation">
+                <div class="dashboard-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h3 class="dashboard-title">Apply for Placement</h3>
+                <p class="dashboard-description">
+                    Submit your profile to our placement cell and get connected with top hiring companies.
+                </p>
+            </div>
+
+            <div class="dashboard-card scroll-animation">
+                <div class="dashboard-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <h3 class="dashboard-title">Training Feedback</h3>
+                <p class="dashboard-description">
+                    Share your valuable feedback about courses and help us improve our training quality.
+                </p>
+            </div>
+
+            <div class="dashboard-card scroll-animation">
+                <div class="dashboard-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h3 class="dashboard-title">Workshop Registration</h3>
+                <p class="dashboard-description">
+                    Register for upcoming seminars, webinars, and technical workshops on latest technologies.
+                </p>
+            </div>
+
+            <div class="dashboard-card scroll-animation">
+                <div class="dashboard-icon">
+                    <i class="fas fa-credit-card"></i>
+                </div>
+                <h3 class="dashboard-title">Pay Online</h3>
+                <p class="dashboard-description">
+                    Secure online payment gateway for course fees with instant payment confirmation.
+                </p>
+            </div>
+
+            <div class="dashboard-card scroll-animation">
+                <div class="dashboard-icon">
+                    <i class="fas fa-sign-in-alt"></i>
+                </div>
+                <h3 class="dashboard-title">Admin Login</h3>
+                <p class="dashboard-description">
+                    Access your personalized student portal for course materials and progress tracking.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+        <div class="section-header">
+            <h2 class="section-title">Student Success Stories</h2>
+            <p class="section-subtitle">Hear from our 70,000+ successful alumni working in top companies worldwide</p>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card scroll-animation">
+                <i class="fas fa-quote-right quote-icon"></i>
+                <p class="testimonial-text">
+                    "SOFCON's Industrial Automation course was exceptional! The trainers are industry experts and the practical training on real PLCs helped me get placed in Siemens. Best decision of my career!"
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">MK</div>
+                    <div class="author-info">
+                        <h4>Manish Kumar Sharma</h4>
+                        <p>Automation Engineer - Siemens India</p>
+                        <div class="author-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card scroll-animation">
+                <i class="fas fa-quote-right quote-icon"></i>
+                <p class="testimonial-text">
+                    "The Data Science program at SOFCON is world-class. Modern curriculum, expert faculty, and placement support helped me land a job at TCS. Highly recommend for aspiring data scientists!"
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">PD</div>
+                    <div class="author-info">
+                        <h4>Pragati Deshmukh</h4>
+                        <p>Data Scientist - TCS Digital</p>
+                        <div class="author-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card scroll-animation">
+                <i class="fas fa-quote-right quote-icon"></i>
+                <p class="testimonial-text">
+                    "Best Embedded Systems training in India! Advanced labs, expert trainers, and real projects. Got placed in Bosch right after course completion. Thank you SOFCON team!"
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">RK</div>
+                    <div class="author-info">
+                        <h4>Rahul Kohli</h4>
+                        <p>Embedded Engineer - Bosch</p>
+                        <div class="author-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card scroll-animation">
+                <i class="fas fa-quote-right quote-icon"></i>
+                <p class="testimonial-text">
+                    "The MEP training at SOFCON is comprehensive and industry-focused. Learned AutoCAD MEP, Revit, and got hands-on site experience. Placed as MEP Design Engineer at L&T!"
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">VG</div>
+                    <div class="author-info">
+                        <h4>Vishal Gupta</h4>
+                        <p>MEP Engineer - L&T Construction</p>
+                        <div class="author-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card scroll-animation">
+                <i class="fas fa-quote-right quote-icon"></i>
+                <p class="testimonial-text">
+                    "AI/ML course exceeded expectations! Projects were challenging and placement cell is very supportive. Working as Machine Learning Engineer now. Best training institute!"
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">AS</div>
+                    <div class="author-info">
+                        <h4>Ankit Sharma</h4>
+                        <p>ML Engineer - Wipro AI</p>
+                        <div class="author-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card scroll-animation">
+                <i class="fas fa-quote-right quote-icon"></i>
+                <p class="testimonial-text">
+                    "Full Stack Development course was amazing! Built real projects with MERN stack. Expert trainers and excellent placement support. Now working at Infosys!"
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">NK</div>
+                    <div class="author-info">
+                        <h4>Neha Kapoor</h4>
+                        <p>Full Stack Developer - Infosys</p>
+                        <div class="author-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Placement Companies -->
+    <section id="placement" class="companies-section">
+        <div class="section-header">
+            <h2 class="section-title">Our Placement Partners</h2>
+            <p class="section-subtitle">500+ leading companies hiring SOFCON trained professionals</p>
+        </div>
+
+        <div class="companies-grid">
+            <div class="company-card scroll-animation">
+                <div class="company-icon"><i class="fas fa-industry"></i></div>
+                <div class="company-name">Siemens</div>
+            </div>
+            <div class="company-card scroll-animation">
+                <div class="company-icon"><i class="fas fa-cogs"></i></div>
+                <div class="company-name">L&T</div>
+            </div>
+            <div class="company-card scroll-animation">
+                <div class="company-icon"><i class="fas fa-building"></i></div>
+                <div class="company-name">TCS</div>
+            </div>
+            <div class="company-card scroll-animation">
+                <div class="company-icon"><i class="fas fa-laptop-code"></i></div>
+                <div class="company-name">Infosys</div>
+            </div>
+            <div class="company-card scroll-animation">
+                <div class="company-icon"><i class="fas fa-microchip"></i></div>
+                <div class="company-name">Wipro</div>
+            </div>
+            <div class="company-card scroll-animation">
+                <div class="company-icon"><i class="fas fa-robot"></i></div>
+                <div class="company-name">Honeywell</div>
+            </div>
+            <div class="company-card scroll-animation">
+                <div class="company-icon"><i class="fas fa-bolt"></i></div>
+                <div class="company-name">ABB</div>
+            </div>
+            <div class="company-card scroll-animation">
+                <div class="company-icon"><i class="fas fa-car"></i></div>
+                <div class="company-name">Bosch</div>
+            </div>
+            <div class="company-card scroll-animation">
+                <div class="company-icon"><i class="fas fa-sun"></i></div>
+                <div class="company-name">NTPC</div>
+            </div>
+            <div class="company-card scroll-animation">
+                <div class="company-icon"><i class="fas fa-plug"></i></div>
+                <div class="company-name">Schneider</div>
+            </div>
+            <div class="company-card scroll-animation">
+                <div class="company-icon"><i class="fas fa-industry"></i></div>
+                <div class="company-name">Reliance</div>
+            </div>
+            <div class="company-card scroll-animation">
+                <div class="company-icon"><i class="fas fa-building"></i></div>
+                <div class="company-name">DMRC</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="section-header">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Start your learning journey today with SOFCON Training</p>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-info">
+                <div class="contact-card scroll-animation">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Call Us</h4>
+                        <p>NOIDA: +91-9811626172</p>
+                        <p>DELHI: +91-9873349546</p>
+                        <p>FARIDABAD: +91-9873689018</p>
+                        <p>BHOPAL: +91-9873684099</p>
+                        <p>AHMEDABAD: +91-9227185900</p>
+                        <p>PUNE: +91-7387700416</p>
+                    </div>
+                </div>
+
+                <div class="contact-card scroll-animation">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Email Us</h4>
+                        <p>info@sofcontraining.com</p>
+                        <p>training@sofcontraining.com</p>
+                        <p>placement@sofcontraining.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-card scroll-animation">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact-details">
+                        <h4>Visit Our Centers</h4>
+                        <p>8+ Training Centers Across India</p>
+                        <p>Noida | Delhi | Faridabad</p>
+                        <p>Pune | Ahmedabad | Bhopal | Indore</p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form scroll-animation">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Your Name *</label>
+                        <input type="text" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address *</label>
+                        <input type="email" placeholder="your.email@example.com" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Phone Number *</label>
+                        <input type="tel" placeholder="+91 XXXXX XXXXX" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Select Center *</label>
+                        <select required>
+                            <option value="">Choose your nearest center</option>
+                            <option>Noida</option>
+                            <option>Delhi</option>
+                            <option>Faridabad</option>
+                            <option>Pune</option>
+                            <option>Ahmedabad</option>
+                            <option>Bhopal</option>
+                            <option>Indore</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Select Course *</label>
+                    <select required>
+                        <option value="">Choose your course of interest</option>
+                        <option>Industrial Automation (PLC, SCADA, DCS)</option>
+                        <option>Artificial Intelligence & Machine Learning</option>
+                        <option>Data Science & Analytics</option>
+                        <option>Embedded Systems & IoT</option>
+                        <option>HVAC & MEP Design</option>
+                        <option>Full Stack Development</option>
+                        <option>Electrical Design & Drafting</option>
+                        <option>Android/iOS Development</option>
+                        <option>Solar Design & Engineering</option>
+                        <option>Building Automation (BMS)</option>
+                        <option>Piping Design & Drafting</option>
+                        <option>VLSI Design</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea rows="5" placeholder="Tell us about your learning goals and any questions you have"></textarea>
+                </div>
+
+                <button type="submit" class="form-submit">
+                    <i class="fas fa-paper-plane"></i> Send Enquiry
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>SOFCON INDIA</h3>
+                <p>
+                    SOFCON India Pvt Ltd is NSDC (National Skill Development Corporation), MSDE (Ministry of Skill Development & Entrepreneurship - Govt. of India) Affiliated & Funded Company. ISO 9001:2015 Certified training institute with 20+ years of excellence in industrial training.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Training Programs</h4>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-angle-right"></i> Job Oriented Training</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i> Summer/Winter Training</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i> Industrial Internship</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i> Corporate Training</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i> College Training</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i> Skill Development</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Popular Courses</h4>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-angle-right"></i> Industrial Automation</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i> AI & Machine Learning</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i> Data Science</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i> Embedded Systems</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i> HVAC & MEP</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i> Full Stack Development</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#"><i class="fas fa-angle-right"></i> About Us</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i> Placement</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i> Testimonials</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i> Blog & Articles</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i> News & Events</a></li>
+                    <li><a href="#"><i class="fas fa-angle-right"></i> Career With Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 SOFCON India Pvt Ltd. All Rights Reserved. | Powered by Innovation Since 2002</p>
+            <p>NSDC Certified | ISO 9001:2015 | Government Approved Training Institute</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-top" id="scrollTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Loading Screen
+        window.addEventListener('load', () => {
+            const loadingScreen = document.getElementById('loadingScreen');
+            setTimeout(() => {
+                loadingScreen.classList.add('hidden');
+            }, 1500);
+        });
+
+        // Scroll Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-animation').forEach(element => {
+            observer.observe(element);
+        });
+
+        // Scroll to Top Button
+        const scrollTopBtn = document.getElementById('scrollTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollTopBtn.classList.add('active');
+            } else {
+                scrollTopBtn.classList.remove('active');
+            }
+        });
+
+        scrollTopBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Smooth Scroll for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Course Category Filter
+        const categoryBtns = document.querySelectorAll('.category-btn');
+        categoryBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                categoryBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+
+        // Form Submission
+        document.querySelector('.contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your enquiry! Our team will contact you shortly.');
+            this.reset();
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        
+        mobileMenuToggle.addEventListener('click', () => {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Add parallax effect to hero section
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if (hero && scrolled < window.innerHeight) {
+                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+
+        // Animate stat numbers on scroll
+        const animateValue = (element, start, end, duration) => {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const value = Math.floor(progress * (end - start) + start);
+                element.textContent = value.toLocaleString() + (element.dataset.suffix || '');
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        };
+
+        const statObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statValue = entry.target.querySelector('.stat-value');
+                    if (statValue && !statValue.classList.contains('animated')) {
+                        const endValue = parseInt(statValue.textContent.replace(/[^0-9]/g, ''));
+                        statValue.classList.add('animated');
+                        animateValue(statValue, 0, endValue, 2000);
+                    }
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.stat-card').forEach(card => {
+            statObserver.observe(card);
+        });
+
+        // Add hover effect sound (optional)
+        document.querySelectorAll('.course-card, .dashboard-card, .feature-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transition = 'all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+            });
+        });
+    </script>
+</body>
+</html>
